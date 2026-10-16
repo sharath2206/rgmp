@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <defs>
+    <!-- Circular text paths -->
+    <!-- Top arc for "RAJIV GANDHI MEMORIAL" (clockwise) -->
+    <path id="topTextArc" d="M 175,500 A 325,325 0 1,1 825,500" fill="none" />
+    <!-- Bottom arc for "Polytechnic, B'lore - 56" (clockwise) -->
+    <path id="bottomTextArc" d="M 175,500 A 325,325 0 0,0 825,500" fill="none" />
+
+    <!-- Repeated Gear Tooth (28 teeth total -> each 360/28 ≈ 12.857 deg) -->
+    <path id="gearTooth" d="M -48,-492 L -42,-420 L 42,-420 L 48,-492 Z" fill="#002060" />
+
+    <!-- 5-Pointed Star Definition -->
+    <polygon id="star" points="0,-22 6.5,-6.5 22,-6.5 9.5,3.5 14,19 0,9.5 -14,19 -9.5,3.5 -22,-6.5 -6.5,-6.5" fill="#002060" />
+
+    <style>
+      .gear-color { fill: #002060; }
+      .bg-white { fill: #ffffff; }
+      .inner-blue { fill: #7d9cb8; }
+      .stroke-white { stroke: #ffffff; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .line-art { stroke: #1b2838; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .line-art-thin { stroke: #1b2838; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .filled-dark { fill: #1b2838; }
+    </style>
+  </defs>
+
+  <!-- 1. Outer Cogwheel / Gear Ring -->
+  <g id="gearOutline">
+    <!-- Base outer circle connecting teeth base -->
+    <circle cx="500" cy="500" r="445" fill="#002060" />
+    
+    <!-- 28 Symmetrical Teeth -->
+    <g transform="translate(500,500)">
+      <use href="#gearTooth" />
+      <use href="#gearTooth" transform="rotate(12.857)" />
+      <use href="#gearTooth" transform="rotate(25.714)" />
+      <use href="#gearTooth" transform="rotate(38.571)" />
+      <use href="#gearTooth" transform="rotate(51.428)" />
+      <use href="#gearTooth" transform="rotate(64.285)" />
+      <use href="#gearTooth" transform="rotate(77.142)" />
+      <use href="#gearTooth" transform="rotate(90)" />
+      <use href="#gearTooth" transform="rotate(102.857)" />
+      <use href="#gearTooth" transform="rotate(115.714)" />
+      <use href="#gearTooth" transform="rotate(128.571)" />
+      <use href="#gearTooth" transform="rotate(141.428)" />
+      <use href="#gearTooth" transform="rotate(154.285)" />
+      <use href="#gearTooth" transform="rotate(167.142)" />
+      <use href="#gearTooth" transform="rotate(180)" />
+      <use href="#gearTooth" transform="rotate(192.857)" />
+      <use href="#gearTooth" transform="rotate(205.714)" />
+      <use href="#gearTooth" transform="rotate(218.571)" />
+      <use href="#gearTooth" transform="rotate(231.428)" />
+      <use href="#gearTooth" transform="rotate(244.285)" />
+      <use href="#gearTooth" transform="rotate(257.142)" />
+      <use href="#gearTooth" transform="rotate(270)" />
+      <use href="#gearTooth" transform="rotate(282.857)" />
+      <use href="#gearTooth" transform="rotate(295.714)" />
+      <use href="#gearTooth" transform="rotate(308.571)" />
+      <use href="#gearTooth" transform="rotate(321.428)" />
+      <use href="#gearTooth" transform="rotate(334.285)" />
+      <use href="#gearTooth" transform="rotate(347.142)" />
+    </g>
+  </g>
+
+  <!-- 2. Main White Ring for Lettering -->
+  <circle cx="500" cy="500" r="410" fill="#ffffff" stroke="#002060" stroke-width="5" />
+
+  <!-- Inner Blue Insignia Disc -->
+  <circle cx="500" cy="500" r="268" fill="#7d9cb8" stroke="#002060" stroke-width="8" />
+
+  <!-- 3. Text Around Outer Ring -->
+  <!-- Top: RAJIV GANDHI MEMORIAL -->
+  <text font-family="&#39;Arial Black&#39;, &#39;Impact&#39;, &#39;Segoe UI&#39;, sans-serif" font-weight="900" font-size="52" fill="#002060">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">
+      RAJIV GANDHI MEMORIAL
+    </textPath>
+  </text>
+
+  <!-- Left and Right Flanking Stars -->
+  <use href="#star" transform="translate(192, 545) rotate(-22) scale(1.35)" />
+  <use href="#star" transform="translate(808, 545) rotate(22) scale(1.35)" />
+
+  <!-- Bottom: Polytechnic, B'lore - 56 -->
+  <text font-family="&#39;Arial Black&#39;, &#39;Impact&#39;, &#39;Segoe UI&#39;, sans-serif" font-weight="900" font-size="47" fill="#002060">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">
+      Polytechnic, B’lore - 56
+    </textPath>
+  </text>
+
+  <!-- 4. Inner Compartment Framework (Cross/Square layout) -->
+  <!-- Center Square -->
+  <rect x="405" y="405" width="190" height="190" class="stroke-white" />
+  
+  <!-- Diagonal Dividers radiating outwards to circle -->
+  <line x1="405" y1="405" x2="310" y2="310" class="stroke-white" />
+  <line x1="595" y1="405" x2="690" y2="310" class="stroke-white" />
+  <line x1="405" y1="595" x2="310" y2="690" class="stroke-white" />
+  <line x1="595" y1="595" x2="690" y2="690" class="stroke-white" />
+
+  <!-- 5. Technical Symbols / Discipline Icons -->
+
+  <!-- TOP PANEL: Flyover / Civil Engineering -->
+  <g id="civil-flyover">
+    <!-- Elevated Highway Deck -->
+    <polygon points="340,310 610,245 612,260 355,328" fill="#54718b" stroke="#1b2838" stroke-width="3" />
+    <!-- Road Surface Top -->
+    <path d="M 340,310 L 610,245 L 612,253 L 348,320 Z" fill="#9dbbd7" />
+    <path d="M 370,305 L 590,252" class="line-art-thin" stroke-dasharray="10,8" />
+    <!-- Curved Piers / Pillars -->
+    <!-- Pier 1 -->
+    <path d="M 425,290 L 427,335 C 427,360 445,372 468,375 L 460,375 C 438,372 418,355 416,325 L 413,293 Z" fill="#67849e" stroke="#1b2838" stroke-width="2.5" />
+    <!-- Pier 2 -->
+    <path d="M 535,263 L 537,305 C 537,325 550,336 575,340 L 568,340 C 548,337 530,323 528,300 L 525,266 Z" fill="#67849e" stroke="#1b2838" stroke-width="2.5" />
+  </g>
+
+  <!-- LEFT PANEL: Computer (Monitor, CPU Base, Keyboard) / Computer Science -->
+  <g id="computer-engineering">
+    <!-- CRT Monitor Casing -->
+    <rect x="295" y="420" width="70" height="64" rx="6" fill="#ccd9e4" stroke="#1b2838" stroke-width="3.5" />
+    <!-- Screen Bezel -->
+    <rect x="303" y="427" width="54" height="46" rx="4" fill="#7a96ad" stroke="#1b2838" stroke-width="2" />
+    <!-- Screen Inner Highlight -->
+    <path d="M 306,430 L 345,430 L 338,465 L 306,465 Z" fill="#90abc2" opacity="0.6" />
+    <!-- Monitor Stand -->
+    <polygon points="320,484 340,484 345,496 315,496" fill="#a4b9cb" stroke="#1b2838" stroke-width="2" />
+    <!-- Desktop Base / CPU Unit -->
+    <polygon points="290,496 370,496 382,536 290,536" fill="#ccd9e4" stroke="#1b2838" stroke-width="3.5" />
+    <line x1="300" y1="512" x2="350" y2="512" class="line-art-thin" />
+    <circle cx="363" cy="512" r="3" class="filled-dark" />
+    <circle cx="363" cy="524" r="2" class="filled-dark" />
+    <!-- Keyboard (Perspective) -->
+    <polygon points="252,544 340,544 358,575 260,575" fill="#ccd9e4" stroke="#1b2838" stroke-width="3.2" />
+    <!-- Key Rows -->
+    <line x1="265" y1="552" x2="340" y2="552" class="line-art-thin" />
+    <line x1="263" y1="560" x2="346" y2="560" class="line-art-thin" />
+    <line x1="268" y1="568" x2="352" y2="568" class="line-art-thin" />
+  </g>
+
+  <!-- CENTER PANEL: Electrical Pylon & Transmission Lines / Electrical Eng. -->
+  <g id="electrical-grid">
+    <!-- Transmission Power Lines passing behind & through -->
+    <line x1="405" y1="450" x2="595" y2="475" class="line-art-thin" />
+    <line x1="405" y1="520" x2="595" y2="500" class="line-art-thin" />
+    <line x1="405" y1="540" x2="595" y2="530" class="line-art-thin" />
+
+    <!-- Lattice High-Voltage Tower -->
+    <!-- Tower Main Struts -->
+    <polygon points="492,408 508,408 548,590 452,590" fill="none" stroke="#1b2838" stroke-width="3.5" />
+    
+    <!-- Cross Bracing Arms -->
+    <!-- Top Crossbar -->
+    <line x1="468" y1="445" x2="532" y2="445" class="line-art" />
+    <line x1="468" y1="445" x2="472" y2="455" class="line-art" />
+    <line x1="532" y1="445" x2="528" y2="455" class="line-art" />
+    
+    <!-- Middle Crossbar -->
+    <line x1="458" y1="482" x2="542" y2="482" class="line-art" />
+    
+    <!-- Lower Crossbar -->
+    <line x1="462" y1="525" x2="538" y2="525" class="line-art" />
+
+    <!-- Internal Lattice X-patterns -->
+    <line x1="492" y1="408" x2="508" y2="445" class="line-art-thin" />
+    <line x1="508" y1="408" x2="492" y2="445" class="line-art-thin" />
+    
+    <line x1="488" y1="445" x2="516" y2="482" class="line-art-thin" />
+    <line x1="512" y1="445" x2="484" y2="482" class="line-art-thin" />
+
+    <line x1="482" y1="482" x2="526" y2="525" class="line-art-thin" />
+    <line x1="518" y1="482" x2="474" y2="525" class="line-art-thin" />
+
+    <line x1="472" y1="525" x2="542" y2="590" class="line-art-thin" />
+    <line x1="528" y1="525" x2="458" y2="590" class="line-art-thin" />
+  </g>
+
+  <!-- RIGHT PANEL: Microwave / Telecommunication Tower & Dishes -->
+  <g id="telecom-tower">
+    <!-- Lattice Mast Structure -->
+    <polygon points="647,385 655,385 667,515 633,515" fill="none" stroke="#1b2838" stroke-width="3" />
+    <line x1="651" y1="365" x2="651" y2="385" stroke="#1b2838" stroke-width="3" /> <!-- Mast tip -->
+    
+    <!-- Tower Bracing Horizontals & Crosses -->
+    <line x1="645" y1="415" x2="657" y2="415" class="line-art-thin" />
+    <line x1="641" y1="445" x2="661" y2="445" class="line-art-thin" />
+    <line x1="637" y1="480" x2="665" y2="480" class="line-art-thin" />
+    
+    <line x1="646" y1="415" x2="661" y2="445" class="line-art-thin" />
+    <line x1="656" y1="415" x2="641" y2="445" class="line-art-thin" />
+    <line x1="641" y1="445" x2="665" y2="480" class="line-art-thin" />
+    <line x1="661" y1="445" x2="637" y2="480" class="line-art-thin" />
+
+    <!-- Circular Microwave Drum Dishes Mounted on Mast -->
+    <ellipse cx="663" cy="398" rx="8" ry="13" fill="#b0c4d6" stroke="#1b2838" stroke-width="2.5" />
+    <ellipse cx="666" cy="432" rx="9" ry="14" fill="#b0c4d6" stroke="#1b2838" stroke-width="2.5" />
+    <ellipse cx="637" cy="415" rx="7" ry="11" fill="#b0c4d6" stroke="#1b2838" stroke-width="2" />
+
+    <!-- Industrial plant / Rocks / Foliage texture at the foot -->
+    <path d="M 602,568 C 610,530 622,505 635,510 C 645,495 665,500 670,520 C 685,505 710,515 716,555 C 720,568 700,578 690,578 Z" fill="#6c8876" stroke="#1b2838" stroke-width="2.5" />
+    <path d="M 615,550 C 630,535 645,555 658,540 C 670,530 690,545 700,565" class="line-art-thin" fill="none" />
+  </g>
+
+  <!-- BOTTOM PANEL: Mobile Phone / Electronics & Communications -->
+  <g id="mobile-device">
+    <!-- Phone rotated -40 degrees -->
+    <g transform="translate(478, 690) rotate(-42)">
+      <!-- Antenna Nub -->
+      <rect x="18" y="-108" width="9" height="18" rx="4" fill="#1b2838" />
+      <!-- Phone Body Chassis -->
+      <rect x="-35" y="-95" width="70" height="135" rx="14" fill="#324456" stroke="#1b2838" stroke-width="3.5" />
+      <!-- Screen Display -->
+      <rect x="-24" y="-78" width="48" height="38" rx="5" fill="#a2b9ce" stroke="#1b2838" stroke-width="2" />
+      <!-- Navigation / Functional Keys -->
+      <ellipse cx="0" cy="-28" rx="12" ry="6" fill="#cedae6" stroke="#1b2838" stroke-width="1.5" />
+      <rect x="-24" y="-31" width="10" height="5" rx="2" fill="#cedae6" />
+      <rect x="14" y="-31" width="10" height="5" rx="2" fill="#cedae6" />
+
+      <!-- Keypad (3x4 Matrix) -->
+      <!-- Row 1 -->
+      <rect x="-22" y="-17" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="-5" y="-17" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="12" y="-17" width="10" height="6" rx="2" fill="#cedae6" />
+      <!-- Row 2 -->
+      <rect x="-22" y="-7" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="-5" y="-7" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="12" y="-7" width="10" height="6" rx="2" fill="#cedae6" />
+      <!-- Row 3 -->
+      <rect x="-22" y="3" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="-5" y="3" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="12" y="3" width="10" height="6" rx="2" fill="#cedae6" />
+      <!-- Row 4 -->
+      <rect x="-22" y="13" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="-5" y="13" width="10" height="6" rx="2" fill="#cedae6" />
+      <rect x="12" y="13" width="10" height="6" rx="2" fill="#cedae6" />
+      
+      <!-- Microphone Hole -->
+      <circle cx="0" cy="28" r="1.5" fill="#ffffff" />
+    </g>
+  </g>
+</svg>
